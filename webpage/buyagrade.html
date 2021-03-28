@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Buy Your Way to a Better Education!</title>
-		<link href="buyagrade.css" type="text/css" rel="stylesheet" />
+		<link href="http://www.cs.washington.edu/education/courses/cse190m/09sp/labs/4-buyagrade/buyagrade.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	<body>
@@ -14,26 +14,37 @@
 		
 		<hr />
 		
+		
 		<h2>Give Us Your Money</h2>
+		<form action="sucker.php" method="post" enctype="multipart/form-data" target="_blank">
 		<dl>
 			<dt>Name</dt>
 			<dd>
-				???
+				<input type="text" name="username" maxlength="10">
 			</dd>
 			
 			<dt>Section</dt>
 			<dd>
-				???
+				<select name="section">
+				<option value="">(Select a section)</option>
+				<option value="MA">MA</option>
+				<option value="MH">MH</option>
+			</select>
 			</dd>
 			
 			<dt>Credit Card</dt>
 			<dd>
-				???
+				<input type="text" name="creditCard"><br>
+			    <input type="hidden" name="cardName">
+				<input type="radio" name="cardName" value="visa">Visa
+			    <input type="radio" name="cardName" value="masterCard">MasterCard
 			</dd>
 		</dl>
 		
+		
 		<div>
-			I am a giant sucker.
+			<input type="submit" value="I am a giant sucker." name="submit">
 		</div>
+		</form>
 	</body>
 </html>
